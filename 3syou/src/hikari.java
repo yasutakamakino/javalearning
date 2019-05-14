@@ -1,5 +1,5 @@
 /**
- * 問題3-2 光を
+ * 問題3-2 光が1日に進む距離を計算して求めるプログラム
  */
 public class hikari {
     public static void main(String[] args) {
