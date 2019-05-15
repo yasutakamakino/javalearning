@@ -15,7 +15,7 @@ public class Unicode {
             //名前の各文字の文字コードを表示
             for (int i = 0; i < m; i++) {
                 char c = name.charAt(i);                                                                                //指定された場所の文字を取得
-                System.out.println("'" + c + "' の文字コードは" + (int) c + "です");                                    //結果を表示する
+                System.out.println("'" + c + "' の文字コードは "+ (int) c + " です。");                                 //結果を表示する
             }
         } catch (IOException e) {
             System.out.println(e);

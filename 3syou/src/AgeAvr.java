@@ -23,7 +23,8 @@ public class AgeAvr {
             line = reader.readLine();                                                                                   //二人目の年齢を入力
             int age2 = Integer.parseInt(line);                                                                          //String型をint型に変換
             System.out.printf(age2 + "歳\n");
-            System.out.println(name1 + "と" + name2 + "の年齢の平均は" + (age1 + age2) / 2 + "歳です");                 //平均年齢を表示する
+            //平均値の計算
+            System.out.println(name1 + "と" + name2 + "の年齢の平均は" + (age1 + age2) / 2 + "歳です");                 //計算の表示
         } catch (IOException e) {
             System.out.println(e);
         } catch (NumberFormatException e) {
