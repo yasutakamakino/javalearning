@@ -9,7 +9,7 @@ public class Day {
     public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
-            System.out.println("0～6の数字を入力してください？");
+            System.out.println("0～6の数字を入力してください。対応した曜日を表示します。");
             String line = reader.readLine(); //数字を入力
             int i = Integer.parseInt(line);  //int型に変換
             switch (i) {

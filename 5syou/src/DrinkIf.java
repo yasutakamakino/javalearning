@@ -12,15 +12,16 @@ public class DrinkIf {
             System.out.println("飲み物は何が好きですか？");
             System.out.println("あ＝オレンジジュース");
             System.out.println("い＝コーヒー");
-            System.out.println("あ、いのどれかを選んでください。");
+            System.out.println("う＝どちらでもない");
+            System.out.println("あ、い、う、のどれかを選んでください。");
             String line = reader.readLine();
             char c = line.charAt(0);
             //if文からswitch文に修正
             switch (c) {
-                case 'あ':       //"い”を入力した場合
+                case 'あ':       //"あ”を入力した場合
                     System.out.println("オレンジジュースです。");
                     break;
-                case 'い':       //"あ”を入力した場合
+                case 'い':       //"い”を入力した場合
                     System.out.println("コーヒーです。");
                     break;
                 default:         //"それ以外の場合

@@ -31,9 +31,9 @@ public class Drink2 {
             String line = reader.readLine();                         //指定された文字または数字を入力
             char i = line.charAt(0);                                 //一文字だけを取得
             //ここから修正した部分
-            if (i == 'a' || i == '1') {              // a or 1　の場合
+            if (i == '1' || i == 'a') {              // 1 or a　の場合
                 System.out.println("オレンジジュースです。");
-            } else if (i == 'b' || i == '2') {       // b or 2　の場合
+            } else if (i == '2' || i == 'b') {       // 2 or b　の場合
                 System.out.println("コーヒーです。");
             } else {                                 //それ以外の場合
                 System.out.println("どちらでもありません。");
