@@ -15,7 +15,7 @@ public class MethodTest {
      * メソッドの中で名字と名前を得るメソッド
      * @param name 名字と名前を格納する配列
      */
-    public static void getYourName(String name[]) {
+    public static void getYourName(String[] name) {
         name[0] = "結城";
         name[1] = "浩";
     }
