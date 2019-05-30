@@ -15,17 +15,18 @@ public class SortData {
             for (int j = i + 1; j < data.length; j++) {
 
                 if (data[i] > data[j]) {
-                    int x;
-                    x = data[j];
-                    data[j] = data[i];
-                    data[i] = x;
+                    int x = 0;
+                    x = data[i];
+                    data[i] = data[j];
+                    data[j] = x;
                 }
             }
         }
         //昇順に並べ替えた後の値の列の表示
-        System.out.println("並べ替える後");
+        System.out.println("並べ替えた後");
         for (int i = 0; i < data.length; i++) {
             System.out.print(data[i] + " ");
         }
+        System.out.println("");
     }
 }
