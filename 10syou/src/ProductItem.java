@@ -3,8 +3,8 @@
  * <pre>
  * {@code
  * public class ProductItem {
- *      char name;
- *      int price;
+ *      char name
+ *      int price
  *
  *       @Override public String toString() {
  *          return [ + name + , + price + ];
