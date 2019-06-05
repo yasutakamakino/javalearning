@@ -23,8 +23,15 @@ public class Rectangle2 {
      * @param h 高さ
      */
     void setSize(int w, int h) {
-        if (0 > w) w = 0;
-        if (0 > h) h = 0;
+        /*
+        if (w < 0) w = 0;
+        if (h < 0) h = 0;
+        */
+
+        //3項演算子を使った場合
+        w = w < 0 ? 0 : w;
+        h = h < 0 ? 0 : h;
+
         width = w;
         height = h;
     }
