@@ -13,7 +13,7 @@ public class Rectangle1 {
 
     @Override
     public String toString() {
-        return "Rectangle(" + width + "," + height + ")";
+        return "Rectangle(" + width + ", " + height + ")";
     }
 
     public static void main(String[] args) {
