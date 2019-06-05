@@ -5,7 +5,7 @@
  * class Point {
  *      int x;
  *      int y;
- *      static void SetPosition(int x, int y){
+ *      static void setPosition(int x, int y){
  *          this.x=x;
  *          this.y=y;
  *      }
@@ -16,7 +16,7 @@ class Point {
     int x;
     int y;
 
-    void SetPosition(int x, int y) { //staticを抜いた
+    void setPosition(int x, int y) { //staticを抜いた
         this.x = x;
         this.y = y;
     }
