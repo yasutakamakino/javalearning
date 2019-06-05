@@ -56,11 +56,11 @@ public class Rectangle3 {
 
     @Override
     public String toString() {
-        return "[" + x + "," + y + "," + width + "," + height + "]";
+        return "[" + x + ", " + y + ", " + width + ", " + height + "]";
     }
 
     //長方形が重なりとその重なり部分の値を得るメソッド
-    Rectangle3 interesect(Rectangle3 m) {
+    Rectangle3 intersect(Rectangle3 m) {
         int sx = Math.max(x, m.x);
         int sy = Math.min(y, m.y);
         int ex = Math.min(x + width, m.x + m.width);
@@ -77,8 +77,18 @@ public class Rectangle3 {
     // メインメソッド
     public static void main(String[] args) {
         Rectangle3 r1 = new Rectangle3(10, 10, 0, 0);
-        Rectangle3 r2 = new Rectangle3(10, 10, 15, 15);
-        Rectangle3 a = r1.interesect(r2);
+        Rectangle3 r2 = new Rectangle3(10, 10, 5, 5);
+        Rectangle3 r3 = new Rectangle3(25, 25, 0, 10);
+        Rectangle3 r4 = new Rectangle3(10, 10, 15, 15);
+        Rectangle3 a = r1.intersect(r2); //r1とr2を重なるか判定
+        Rectangle3 b = r1.intersect(r3); //r1とr3が重なるか判定
+        Rectangle3 c = r1.intersect(r4); //r1とr4が重なるか判定
+        Rectangle3 d = r2.intersect(r3); //r2とr3が重なるか判定
+        Rectangle3 e = r2.intersect(r4); //r2とr4が重なるか判定
         System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+        System.out.println(d);
+        System.out.println(e);
     }
 }
