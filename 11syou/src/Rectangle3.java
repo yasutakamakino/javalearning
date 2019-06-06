@@ -78,20 +78,25 @@ public class Rectangle3 {
     // メインメソッド
     public static void main(String[] args) {
         Rectangle3 r1 = new Rectangle3(0, 0, 10, 10);
-        Rectangle3 r2 = new Rectangle3(0, 0, 30, 30);
+        Rectangle3 r2 = new Rectangle3(7, 4, 18, 13);
         Rectangle3 r3 = new Rectangle3(20, 20, 20, 20);
-        Rectangle3 r4 = new Rectangle3(5, 5, 5, 50);
+        Rectangle3 r4 = new Rectangle3(-5, -5, 15, 50);
+        Rectangle3 r5 = new Rectangle3(-32, 11, 54, 36);
+
         Rectangle3 a = r1.intersect(r2); //r1とr2を重なるか判定
         Rectangle3 b = r1.intersect(r3); //r1とr3が重なるか判定
         Rectangle3 c = r1.intersect(r4); //r1とr4が重なるか判定
         Rectangle3 d = r2.intersect(r3); //r2とr3が重なるか判定
         Rectangle3 e = r2.intersect(r4); //r2とr4が重なるか判定
         Rectangle3 f = r3.intersect(r4); //r2とr4が重なるか判定
+        Rectangle3 g = r3.intersect(r5); //r3とr5が重なるか判定
+
         System.out.println("r1とr2で重なる部分" + a + "です");
         System.out.println("r1とr3で重なる部分" + b + "です");
         System.out.println("r1とr4で重なる部分" + c + "です");
         System.out.println("r2とr3で重なる部分" + d + "です");
         System.out.println("r2とr4で重なる部分" + e + "です");
         System.out.println("r3とr4で重なる部分" + f + "です");
+        System.out.println("r3とr5で重なる部分" + g + "です");
     }
 }
