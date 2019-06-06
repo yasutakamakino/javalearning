@@ -29,12 +29,11 @@ public class Rectangle2 {
         */
 
         //3項演算子を使った場合
-        w = w < 0 ? 0 : w;
-        h = h < 0 ? 0 : h;
+        width = w < 0 ? 0 : w;
+        height= h < 0 ? 0 : h;
 
-        width = w;
-        height = h;
     }
+
 
     /**
      * getAreaメソッド<br>
