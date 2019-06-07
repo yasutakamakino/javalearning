@@ -8,19 +8,19 @@ public class PlaceRectangle2 {
 
     //引数なしのコンストラクタ
     public PlaceRectangle2() {
-        r=new Rectangle();
+        r = new Rectangle();
         setLocation(0, 0);
     }
 
     //位置付きあり
     public PlaceRectangle2(int x, int y) {
-        r=new Rectangle();
+        r = new Rectangle();
         setLocation(x, y);
     }
 
     //位置と大きさを引数としたコンストラクタ
     public PlaceRectangle2(int x, int y, int width, int height) {
-        r=new Rectangle(width, height);
+        r = new Rectangle(width, height);
         setLocation(x, y);
     }
 
