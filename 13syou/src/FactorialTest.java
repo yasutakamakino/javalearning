@@ -6,7 +6,7 @@ public class FactorialTest {
         System.out.println(factorial(10));
     }
 
-    //再帰で10の会場を求めるメソッド
+    //再帰で10の階乗を求めるメソッド
     public static int factorial(int n) {
         if (n > 1) {
             return n * factorial(n - 1);
