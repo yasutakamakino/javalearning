@@ -18,7 +18,9 @@ public class ExceptionTest5 {
     }
 
     static void method2(int x) throws Exception {
-        throw new Exception();//例外を発生させる
+        if (x == 0) {
+            throw new Exception();//例外を発生させる
+        }
     }
 
     static void method3(int x) throws Exception {
