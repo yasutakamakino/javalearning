@@ -16,11 +16,10 @@ public class ExceptionTest3 {
             System.out.println("myAssignに来ました");
             arr[index] = value;
             System.out.println("代入しました");
-            System.out.println("myAssignから帰ります");
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("代入できませんでした");
             System.out.println("例外は" + e + "です");
-            System.out.println("myAssignから帰ります");
         }
+        System.out.println("myAssignから帰ります");
     }
 }
