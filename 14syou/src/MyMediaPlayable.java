@@ -9,6 +9,6 @@ interface MyMediaPlayable {
     void loop();
 }
 
-interface MySoundName extends MyMediaPlayable {
+interface MySoundPlayable extends MyMediaPlayable {
     String getSoundName();
 }
