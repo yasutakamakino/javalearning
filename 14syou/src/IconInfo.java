@@ -6,10 +6,10 @@ import java.awt.*;
  * 型はintで名前はICON_16x16,値は１であるフィールド<br>
  * 型はintで名前はICON_32x32,値は2であるフィールド
  */
-public class IconInfo {
+public interface IconInfo {
     Image getIcon(int iconType);
 
-    int Icon_16x16 = 1;
-    int Icon_32x32 = 2;
+    int ICON_16x16 = 1;
+    int ICON_32x32 = 2;
 
 }
