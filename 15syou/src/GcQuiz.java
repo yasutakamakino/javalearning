@@ -65,8 +65,9 @@ public class GcQuiz {
         ClassB e = new ClassB("ルーシー", new ClassA("ティギー"));
         e = null;
 
-        //表示times
         System.gc();
+
+        //生き残っているインスタンスの確認
         //アルファベット単体
         System.out.println("q:" + q);
         System.out.println("a:" + a);
