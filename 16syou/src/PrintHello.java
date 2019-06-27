@@ -11,8 +11,8 @@ class LabelPrinter extends Thread {
     @Override
     public void run() { //staticを抜いた。
         while (true) {
+            System.out.println(label); //「修正」System.out.printlnはtryの外に出した
             try {
-                System.out.println(label);
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
 
@@ -23,7 +23,7 @@ class LabelPrinter extends Thread {
 
 public class PrintHello {
     public static void main(String[] args) {
-        LabelPrinter th = new LabelPrinter("こんにちわ");
+        LabelPrinter th = new LabelPrinter("こんにちは！");  //「修正」こんちちわ⇒こんにちは！に変更
         th.start();
     }
 }
