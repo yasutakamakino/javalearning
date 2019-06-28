@@ -18,9 +18,7 @@ public class CountTen3 extends Thread {
     @Override
     public void run() {
         for (int i = 0; i < 10; i++) {
-
-            System.out.print("run:i=" + i+" "); //「修正」run：iとgetName()の表示を分けた。
-            System.out.println(getName());
+            System.out.println("run:i=" + i + " " + getName()); //「修正」
         }
     }
 }
