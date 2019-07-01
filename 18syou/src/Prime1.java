@@ -11,6 +11,8 @@ import java.io.PrintWriter;
  * のように実行すると、prime.txtの内容はFig.18-15のようになる予定です。このプログラムを完成させてください。
  */
 public class Prime1 {
+    static final int MAX_PRIME = 1000; //MAX_PRIMEの値を宣言 //「修正」位置を先頭に移動
+
     public static void main(String[] args) {
         if (args.length != 1) {
             System.out.println("使用法；java Prime 作成ファイル");
@@ -30,7 +32,6 @@ public class Prime1 {
     }
 
     public static void writePrime(PrintWriter writer) {
-        int MAX_PRIME = 1000; //MAX_PRIMEの値を宣言
         boolean[] prime = new boolean[MAX_PRIME];
         for (int n = 0; n < MAX_PRIME; n++) {
             prime[n] = true;
