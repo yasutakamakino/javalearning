@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * 問題19-3 ArrayListの内部の作成
+ * 問題19-2  以下のコードの実行結果を確認する問題
  */
 public class Question {
     public static void main(String[] args) {
