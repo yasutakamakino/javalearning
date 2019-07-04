@@ -10,7 +10,7 @@ public class FindFile1 {
     public static void main(String[] args) {
         if (args.length !=2) {  //「修正」1⇒２に変更
             System.out.println("使用法:Java FindFile1 検索文字列  検索対象ファイル");  //「修正」FindFile1に変更
-            System.out.println("例:java FindFind1 System FindFile1.java"); //「修正」FindFile1に変更cd
+            System.out.println("例:java FindFind1 System FindFile1.java"); //「修正」FindFile1に変更
             System.exit(0);
         }
         String keyword = args[0];
