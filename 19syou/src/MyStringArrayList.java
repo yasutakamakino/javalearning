@@ -2,20 +2,20 @@
  * 問題19-3 ArrayListの内部の作成
  */
 public class MyStringArrayList {
-    private static final int INITTAL_CAPACITY = 4;
+    private static final int INITIAL_CAPACITY = 4; //「修正」INITTAL⇒INITIAL
     private String[] ar;
     private int sz;
 
     public MyStringArrayList() {
-        ar = new String[INITTAL_CAPACITY];
+        ar = new String[INITIAL_CAPACITY];
         sz = 0;
     }
 
     public void add(String s) {
         if (ar.length == sz) {
-            String[] newar = new String[ar.length * 2];
-            System.arraycopy(ar, 0, newar, 0, sz);
-            ar = newar;
+            String[] newAr = new String[ar.length * 2];  //「修正」newar⇒newAr
+            System.arraycopy(ar, 0, newAr, 0, sz);
+            ar = newAr;
         }
         ar[sz] = s;
         sz++;
