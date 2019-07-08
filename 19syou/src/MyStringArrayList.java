@@ -21,11 +21,9 @@ public class MyStringArrayList {
         sz++;
     }
 
-    public void get(int n) {
+    public String get(int n) {
         if ((0 <= n) && (n < ar.length)) {
-            for (int i = 0; i < n; i++) {
-                System.out.println(ar[i]);
-            }
+            return ar[n];
         }else {
             throw new IndexOutOfBoundsException();
         }
@@ -43,6 +41,9 @@ public class MyStringArrayList {
         msal.add("え");
         msal.add("お");
         msal.get(msal.sz);
+        for (int i = 0; i < msal.sz; i++) {
+            System.out.println(msal.get(i));
+        }
         System.out.println(msal.size());
     }
 }
