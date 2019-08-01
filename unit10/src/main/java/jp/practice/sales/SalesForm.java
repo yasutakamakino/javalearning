@@ -1,13 +1,21 @@
 package jp.practice.sales;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SalesForm {
+
 	private String goodsName;
-	private int ponit;
-	private String delNumber;
+	private String point = "1";
+	private int delNumber = 0;
+	private List<Item> AllList = new ArrayList<Item>();
+	private int total = 0;
 
-
+	/**
+	 *
+	 */
 	public SalesForm() {
-		// TODO 自動生成されたコンストラクター・スタブ
+
 	}
 
 
@@ -28,25 +36,25 @@ public class SalesForm {
 
 
 	/**
-	 * @return ponit
+	 * @return point
 	 */
-	public int getPonit() {
-		return ponit;
+	public String getPoint() {
+		return point;
 	}
 
 
 	/**
-	 * @param ponit セットする ponit
+	 * @param point セットする point
 	 */
-	public void setPonit(int ponit) {
-		this.ponit = ponit;
+	public void setPoint(String point) {
+		this.point = point;
 	}
 
 
 	/**
 	 * @return delNumber
 	 */
-	public String getDelNumber() {
+	public int getDelNumber() {
 		return delNumber;
 	}
 
@@ -54,8 +62,49 @@ public class SalesForm {
 	/**
 	 * @param delNumber セットする delNumber
 	 */
-	public void setDelNumber(String delNumber) {
+	public void setDelNumber(int delNumber) {
 		this.delNumber = delNumber;
+	}
+
+
+	/**
+	 * @return allList
+	 */
+	public List<Item> getAllList() {
+		return AllList;
+	}
+
+	/**
+	 * @param item  AllListにaddする.
+	 */
+	public void addToAllList(Item item) {
+		AllList.add(item);
+	}
+
+	/**
+	 * @param delNumber AllListにremoveする.
+	 */
+	public void removeToAllList(int delNumber) {
+		AllList.remove(AllList.get(delNumber));
+	}
+
+	/**
+	 * @param AllListにclearする.
+	 */
+	public void cleaeToAllList() {
+		AllList.clear();
+	}
+
+
+	/**
+	 * @return total
+	 */
+	public int getTotal() {
+		total = 0;
+		for (int i = 0; i < AllList.size(); i++) {
+			total = total + (AllList.get(i)).getSubtotal();
+		}
+		return total;
 	}
 
 }

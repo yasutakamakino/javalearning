@@ -1,12 +1,18 @@
 package jp.practice.sales;
 
 public class Item {
+	private String id;
+	private String name;
+	private int price;
+	private int quantity;
+	private int subtotal;
+
 	/**
-	 * @param id
-	 * @param name
-	 * @param price
-	 * @param quantity
-	 * @param subtotal
+	 * @param id       ID
+	 * @param name     名前
+	 * @param price    価格
+	 * @param quantity 個数
+	 * @param subtotal 小計
 	 */
 	public Item(String id, String name, int price, int quantity, int subtotal) {
 		this.id = id;
@@ -15,71 +21,77 @@ public class Item {
 		this.quantity = quantity;
 		this.subtotal = subtotal;
 	}
-	private String id;
-	private String name;
-	private int price;
-	private int quantity;
-	private int subtotal;
+
 	/**
 	 * @return id
 	 */
 	public String getId() {
 		return id;
 	}
+
 	/**
 	 * @param id セットする id
 	 */
 	public void setId(String id) {
 		this.id = id;
 	}
+
 	/**
 	 * @return name
 	 */
 	public String getName() {
 		return name;
 	}
+
 	/**
 	 * @param name セットする name
 	 */
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	/**
 	 * @return price
 	 */
 	public int getPrice() {
 		return price;
 	}
+
 	/**
 	 * @param price セットする price
 	 */
 	public void setPrice(int price) {
 		this.price = price;
 	}
+
 	/**
 	 * @return quantity
 	 */
 	public int getQuantity() {
 		return quantity;
 	}
+
 	/**
 	 * @param quantity セットする quantity
 	 */
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
+
 	/**
 	 * @return subtotal
 	 */
 	public int getSubtotal() {
 		return subtotal;
 	}
+
 	/**
 	 * @param subtotal セットする subtotal
 	 */
 	public void setSubtotal(int subtotal) {
 		this.subtotal = subtotal;
 	}
+
 	/* (非 Javadoc)
 	 * @see java.lang.Object#hashCode()
 	 */
@@ -90,6 +102,7 @@ public class Item {
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		return result;
 	}
+
 	/* (非 Javadoc)
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
@@ -114,5 +127,4 @@ public class Item {
 		}
 		return true;
 	}
-
 }

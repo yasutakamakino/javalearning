@@ -3,42 +3,41 @@
 <%@ page import="java.time.LocalDate"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@page import="java.util.*" %>
-<%@page import="java.text.*" %>
+<%@page import="java.util.*"%>
+<%@page import="java.text.*"%>
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" type="text/css"
-	href="/address/resources/css/common.css" />
-<title>住所録(初期画面)</title>
+	href="/sales/resources/css/common.css" />
+<title>売上システム(初期画面)</title>
 </head>
 <body>
-	<form:form modelAttribute="salesSystemForm" action="/sales/system">
+	<form:form modelAttribute="salesForm" action="/sales/system">
 		<div class="header">
-			<span class="titleName">山田オンラインショップ </span>
+			<span class="titleName">牧野オンラインシステム</span>
 			<%
-		      GregorianCalendar cal = new GregorianCalendar();
-		      SimpleDateFormat format = new SimpleDateFormat("M月d日 E曜日");
-		      String datestr = format.format(cal.getTime());
-		    %>
+				GregorianCalendar cal = new GregorianCalendar();
+					SimpleDateFormat format = new SimpleDateFormat("M月d日 (E)");
+					String datestr = format.format(cal.getTime());
+			%>
 			<%=datestr%>
 		</div>
 		<div class="main">
-			<div>
+			<div class="footer">
 				<div>
-				<div class="message"><c:out value="${nameList}" /></div>
-				<form:select path="goodsName" items="${nameList}" />
+					商品:
+					<form:select path="goodsName" items="${nameList}" />
 				</div>
-				<span class="itemName">
-				点数:<input type="text" name="point" value="1" />
-				</span>
+				<div>
+					<span class="itemnum">点数:</span>
+					<form:input path="point" value="${point}" />
+				</div>
+				<input type="submit" name="add" value="明細追加" />
 			</div>
 		</div>
-		<div class="footer">
-			<div>
-				<input type="submit" name="add" value="明細参照" />
-			</div>
-		</div>
+		<font color=#ff0000><c:out value="${message1}" /></font>
+		<font color=#0000ff><c:out value="${message2}" /></font>
 	</form:form>
 </body>
 </html>

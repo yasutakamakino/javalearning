@@ -3,45 +3,73 @@
 <%@ page import="java.time.LocalDate"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@page import="java.util.*" %>
-<%@page import="java.text.*" %>
+<%@page import="java.util.*"%>
+<%@page import="java.text.*"%>
 <!DOCTYPE html>
 <html>
-
 <head>
 <link rel="stylesheet" type="text/css"
-	href="/address/resources/css/common.css" />
-<title>住所録(初期画面)</title>
+	href="/sales/resources/css/common.css" />
+<title>売上システム(参照画面)</title>
 </head>
 <body>
-	<form:form modelAttribute="salesSystemForm" action="/sales/system">
+	<form:form modelAttribute="salesForm" action="/sales/system">
 		<div class="header">
-			<span class="titleName">山田オンラインショップ </span>
+			<span class="titleName">牧野オンラインシステム</span>
 			<%
-		      GregorianCalendar cal = new GregorianCalendar();
-		      SimpleDateFormat format = new SimpleDateFormat("M月d日 E曜日");
-		      String datestr = format.format(cal.getTime());
-		    %>
+				GregorianCalendar cal = new GregorianCalendar();
+					SimpleDateFormat format = new SimpleDateFormat("M月d日 (E)");
+					String datestr = format.format(cal.getTime());
+			%>
 			<%=datestr%>
 		</div>
 		<div class="main">
-			<div>
+			<div class="footer">
 				<div>
-				${list.name}
+					<span class="itemName">商品:</span>
+					<form:select path="goodsName" items="${nameList}" />
 				</div>
-				<span class="itemName">
-				点数:<input type="text" name="ten" value="1" />
-				</span>
+				<div>
+					<span class="itemnum">点数:</span>
+					<form:input path="point" value="${point}" />
+				</div>
+				<input type="submit" name="add" value="明細追加" />
 			</div>
+			<br>
+				<font color=#ff0000><c:out value="${message1}" /></font>
+				<font color=#0000ff><c:out value="${message2}" /></font>
+			<br>
 		</div>
+
+		<table border="1">
+			<caption>売上詳細</caption>
+			<tr>
+				<th>削除</th>
+				<th>商品ＩＤ</th>
+				<th>商品名</th>
+				<th>単価</th>
+				<th>点数</th>
+				<th>小計</th>
+			</tr>
+
+			<c:forEach items="${AllList}" var="AllList"  varStatus="loop">
+				<tr>
+					<td><form:radiobutton path="delNumber" value="${loop.count}"/></td>
+					<td>${AllList.id}</td>
+					<td>${AllList.name}</td>
+					<td>${AllList.price}</td>
+					<td>${AllList.quantity}</td>
+					<td>${AllList.subtotal}</td>
+				</tr>
+			</c:forEach>
+		</table>
+		  合計： <c:out value="${total}" /> 円
 		<div class="footer">
-			<div>
-				<input type="submit" name="add" value="明細参照" />
-			</div>
+			<input type="submit" name="delete" value="削除" />
+			 <input type="submit" name="firm" value="確定">
 		</div>
-		<div class="footer">
-			<input type="submit" name="toInit" value="戻る" />
-		</div>
+
 	</form:form>
 </body>
 </html>
+

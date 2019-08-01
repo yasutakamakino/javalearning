@@ -1,23 +1,22 @@
-@CHARSET "UTF-8";
+@charset "UTF-8";
 
 .header {
 	width: 300px;
 	margin: 0px;
 	padding: 5px;
-	background-color: #EE82EE;
+	background-color: #ff80c0;
 }
 
 .main {
-	line-height: 1.5em;
+
 }
 
 .titleName {
 	text-align: left;
-	font-size: xx-large;
+	font-size: large;
 }
-
 .date {
-	text-align: right;
+	text-align: left;
 	font-size: x-large;
 }
 
@@ -25,21 +24,16 @@
 	font-weight: bold;
 }
 
-.itemName {
-	display: inline-block;
-	width: 90px;
-}
-
 .footer {
 	line-height: 1.5em;
 	width: 310px;
-	text-align: right;
+	text-align: left;
 }
 
 .listFooter {
 	line-height: 1.5em;
 	width: 460px;
-	text-align: right;
+	text-align: left;
 }
 
 .even {
